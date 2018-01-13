@@ -102,6 +102,7 @@ func ProcessMessage(event Messaging) {
 	}
 
 	resp, err := client.Do(req)
+	log.Println(resp)
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -133,6 +133,7 @@ func main() {
 	}
 
 	log.Println("Starting.....")
+	log.Println("ENV: ", os.Getenv("PAGE_ACCESS_TOKEN"))
 	r := mux.NewRouter()
 	r.HandleFunc("/webhook", VerificationEndpoint).Methods("GET")
 	r.HandleFunc("/webhook", MessagesEndpoint).Methods("POST")

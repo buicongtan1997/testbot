@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	
+
 	"github.com/joho/godotenv"
 	"github.com/gorilla/mux"
 )
@@ -76,6 +76,8 @@ func VerificationEndpoint(w http.ResponseWriter, r *http.Request) {
 }
 
 func ProcessMessage(event Messaging) {
+	log.Println("Recive message!")
+	log.Println(event.Sender.ID)
 	client := &http.Client{}
 	response := Response{
 		Recipient: User{
@@ -130,7 +132,7 @@ func main() {
 	  log.Fatal("Error loading .env file")
 	}
 
-
+	log.Println("Starting.....")
 	r := mux.NewRouter()
 	r.HandleFunc("/webhook", VerificationEndpoint).Methods("GET")
 	r.HandleFunc("/webhook", MessagesEndpoint).Methods("POST")

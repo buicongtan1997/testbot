@@ -1,0 +1,1 @@
+docker run -v "$(pwd)":/go/ -e GOPATH=/go/ --rm -it golang bash

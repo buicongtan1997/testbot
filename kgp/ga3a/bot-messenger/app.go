@@ -11,7 +11,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"github.com/gorilla/mux"
-	."kgp/ga3a/bot-messenger/models"
+	."./models"
 )
 
 const (

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
-	."kgp/ga3a/bot-messenger/models"
+	."./models"
 )
 
 func VerificationEndpoint(w http.ResponseWriter, r *http.Request) {

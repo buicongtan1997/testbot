@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 	"fmt"
-	."kgp/ga3a/bot-messenger/models"
+	."./models"
 )
 
 func ProcessMessage(event Messaging) {
